@@ -14,15 +14,56 @@ I pledge my honor to have abided by the Stevens Honor System - KP, SD, CK
 
 <h1>Bot Description:
   
-  
+
   
 <h1>Use Cases:
   
+Use Case 1: Search for posts containing a specific keyword(s)
+1. Preconditions
+
+   Reddit Search Bot is installed on Discord
+
+2. Main Flow
+
+   User searches for Reddit posts related to specific keywords using Discord[S1]. Bot displays a list of posts related to the keywords including the comments and the usernames
+   of the post creators[S2].
+
+
+3. Subflows
+
+    [S1] User types in a keyword on Discord with the search function and with certain filters i.e. number of upvotes, popularity, recency, number of posts, etc.
+    [S2] Bot will return a list of posts containing the keyword.  
+
+4. Alternative Flows
+
+    [E1] No posts related to the keyword found
+    [E2] Number of posts in the filter exceeds the allowed limit from Bot.
+
+
+
+Use Case 2: Search for Subreddits about a specific keyword
+1. Preconditions
+
+   Reddit Search Bot is installed on Discord
+
+2. Main Flow
+
+   User searches for a specific keyword on discord with specific filters[S1]. Bot displays a list of Subreddits containing the keyword[S2].
+
+
+3. Subflows
+
+   [S1] User types in a keyword on Discord with the search function and with certain filters i.e. popularity, number of posts, etc.
+   [S2] Bot will return a list of Subreddit titles with hyperlinks containing the keyword.  
   
+4. Alternative Flows
+
+   [E1] No Subreddits exist with keyword.
+   [E2] Number of Subreddits in the filter exceeds the allowed limit from Bot.
+
   
 <h1>Design Sketches:
  
 ![Gather Info Bot StoryBoard (4)](https://user-images.githubusercontent.com/62805944/112771149-7b67e580-8ff8-11eb-9e11-106c0d74c2a2.png)
-
 
 <h1>Architecture Design:
