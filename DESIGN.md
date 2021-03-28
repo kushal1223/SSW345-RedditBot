@@ -92,6 +92,7 @@ only activated when intended. After the bot processes the user’s request and g
 messages through Discord. This interface allows for users to easily share content on Reddit with their friends without having to leave Discord. 
 
 
+
 Reddit Bot will process requests by continually running on an Ubuntu server hosted by a cloud computing company such as AWS. Since the uptime and responsiveness of the bot is 
 of most importance, using a cloud computing platform is the best course of action due to their reliability. GET requests will be sent from the Ubuntu server using Python 
 scripts. These requests will then be sent to Reddit’s servers. Reddit will then return data based on the GET request and the data will then be processed using Python. The 
