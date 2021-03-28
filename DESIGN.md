@@ -77,11 +77,11 @@ reddit content more easily with friends.
    [E2] Number of Subreddits in the filter exceeds the allowed limit from Bot.
 
   
-<h1>Design Sketches:
+<h1>Design Sketches<h1>:
  
 ![Gather Info Bot StoryBoard (4)](https://user-images.githubusercontent.com/62805944/112771149-7b67e580-8ff8-11eb-9e11-106c0d74c2a2.png)
 
-<h1>Architecture Design:
+<h1>Architecture Design<h1>:
 
 ![Design Milestone (1)](https://user-images.githubusercontent.com/62805944/112772320-18794d00-8ffe-11eb-92dc-9b55ba928f72.png)
 
