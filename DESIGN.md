@@ -1,6 +1,7 @@
 # SSW 345 Design Milestone
 
 Kushal Patel, Spencer Drucker, Christian Kubelle
+
 I pledge my honor to have abided by the Stevens Honor System - KP, SD, CK
 
 
