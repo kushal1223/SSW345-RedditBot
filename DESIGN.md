@@ -14,6 +14,13 @@ I pledge my honor to have abided by the Stevens Honor System - KP, SD, CK
 
 <h1>Bot Description:
   
+  <h3>The bot will gather information from Reddit.com and will post the information it collected for the user on Discord in the form of text. There is a lot of information the bot
+will be able to gather from Reddit such as the URL of the post, the content within the post, the user who created the post, etc. The user will specify what type of information
+they want by including keywords when it interacts with the bot. For example, the user can specify if they want to search by posts or search by subreddits. Then, they can 
+specify the topic they are interested in, the popularity filter, and the number of posts/subreddits they want the bot to display.
+	The bot is a good solution to the problem because it will provide information from Reddit.com without the user needing to leave Discord. The Reddit Bot will provide users 
+with multiple links all at once. This will save users the time from manually searching for topics and viewing one post at a time. Furthermore, users will be able to share 
+reddit content more easily with friends.
 
   
 <h1>Use Cases:
