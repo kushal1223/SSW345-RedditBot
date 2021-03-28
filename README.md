@@ -1,1 +1,1 @@
-# SSW345-RedditBot
+# SSW 345- Team Project - Reddit Bot
