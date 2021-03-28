@@ -82,3 +82,5 @@ reddit content more easily with friends.
 ![Gather Info Bot StoryBoard (4)](https://user-images.githubusercontent.com/62805944/112771149-7b67e580-8ff8-11eb-9e11-106c0d74c2a2.png)
 
 <h1>Architecture Design:
+
+![Design Milestone](https://user-images.githubusercontent.com/62805944/112772238-b3bdf280-8ffd-11eb-979d-70986fa4104b.png)
