@@ -83,4 +83,5 @@ reddit content more easily with friends.
 
 <h1>Architecture Design:
 
-![Design Milestone](https://user-images.githubusercontent.com/62805944/112772238-b3bdf280-8ffd-11eb-979d-70986fa4104b.png)
+![Design Milestone (1)](https://user-images.githubusercontent.com/62805944/112772320-18794d00-8ffe-11eb-92dc-9b55ba928f72.png)
+
