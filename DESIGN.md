@@ -18,7 +18,7 @@ I pledge my honor to have abided by the Stevens Honor System - KP, SD, CK
   
 <h1>Use Cases:
   
-Use Case 1: Search for posts containing a specific keyword(s)
+<h3>Use Case 1: Search for posts containing a specific keyword(s)
 1. Preconditions
 
    Reddit Search Bot is installed on Discord
@@ -32,11 +32,13 @@ Use Case 1: Search for posts containing a specific keyword(s)
 3. Subflows
 
     [S1] User types in a keyword on Discord with the search function and with certain filters i.e. number of upvotes, popularity, recency, number of posts, etc.
+    
     [S2] Bot will return a list of posts containing the keyword.  
 
 4. Alternative Flows
 
     [E1] No posts related to the keyword found
+    
     [E2] Number of posts in the filter exceeds the allowed limit from Bot.
 
 
@@ -54,11 +56,13 @@ Use Case 2: Search for Subreddits about a specific keyword
 3. Subflows
 
    [S1] User types in a keyword on Discord with the search function and with certain filters i.e. popularity, number of posts, etc.
+   
    [S2] Bot will return a list of Subreddit titles with hyperlinks containing the keyword.  
   
 4. Alternative Flows
 
    [E1] No Subreddits exist with keyword.
+   
    [E2] Number of Subreddits in the filter exceeds the allowed limit from Bot.
 
   
