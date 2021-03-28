@@ -69,7 +69,6 @@ Use Case 2: Search for Subreddits about a specific keyword
 
   
 <h1>Design Sketches:
-  
  
 ![Gather Info Bot StoryBoard (4)](https://user-images.githubusercontent.com/62805944/112771149-7b67e580-8ff8-11eb-9e11-106c0d74c2a2.png)
 
