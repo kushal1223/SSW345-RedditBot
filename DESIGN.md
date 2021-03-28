@@ -18,8 +18,8 @@ I pledge my honor to have abided by the Stevens Honor System - KP, SD, CK
   
 <h1>Use Cases:
   
-<h3>Use Case 1: Search for posts containing a specific keyword(s)
-  
+<h2>Use Case 1: Search for posts containing a specific keyword(s)<h2>
+<h3>
 1. Preconditions
 
    Reddit Search Bot is installed on Discord
@@ -44,7 +44,7 @@ I pledge my honor to have abided by the Stevens Honor System - KP, SD, CK
 
 
 
-Use Case 2: Search for Subreddits about a specific keyword
+<h2>Use Case 2: Search for Subreddits about a specific keyword<h2>
 
 1. Preconditions
 
