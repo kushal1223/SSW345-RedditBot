@@ -21,7 +21,8 @@ I pledge my honor to have abided by the Stevens Honor System - KP, SD, CK
   
   
 <h1>Design Sketches:
-  
+ 
+![Gather Info Bot StoryBoard (4)](https://user-images.githubusercontent.com/62805944/112771149-7b67e580-8ff8-11eb-9e11-106c0d74c2a2.png)
 
 
 <h1>Architecture Design:
