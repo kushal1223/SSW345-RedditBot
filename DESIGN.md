@@ -85,3 +85,25 @@ reddit content more easily with friends.
 
 ![Design Milestone (1)](https://user-images.githubusercontent.com/62805944/112772320-18794d00-8ffe-11eb-92dc-9b55ba928f72.png)
 
+Discord is the front end interface between the user and Reddit Bot. Discord provides and maintains an API Wrapper called “discord.py” that allows for a bot to monitor a discord 
+server and adapt to given inputs. This is great for our bot because we won’t have to write code from scratch to implement this functionality and we can spend more time on 
+higher-level functionality. For our specific project, we will have Reddit Bot perform actions only when a user starts a message with “-r”. This is to ensure that Reddit Bot is
+only activated when intended. After the bot processes the user’s request and gains all necessary information from Reddit, the bot will communicate back to the user by sending
+messages through Discord. This interface allows for users to easily share content on Reddit with their friends without having to leave Discord. 
+
+
+Reddit Bot will process requests by continually running on an Ubuntu server hosted by a cloud computing company such as AWS. Since the uptime and responsiveness of the bot is 
+of most importance, using a cloud computing platform is the best course of action due to their reliability. GET requests will be sent from the Ubuntu server using Python 
+scripts. These requests will then be sent to Reddit’s servers. Reddit will then return data based on the GET request and the data will then be processed using Python. The 
+Ubuntu server will be in constant communication with Discord’s servers as well as Reddit’s servers which will connect all individual components together. 
+
+
+The team is using Reddit’s API Wrapper called PRAW to obtain relevant information on Reddit. This approach is effective because the bot will be able to retrieve the exact 
+information it needs without having to do complex web scraping. The data returned from Reddit’s servers will be in the form of strings or arrays containing strings. This data
+will then be processed using Python. Some examples of the types of data that the Reddit servers will return to Reddit Bot are urls of certain reddit posts, comments related to
+specific reddit posts, names of popular subreddits, etc.  
+
+
+Python will be used to process the data since it is effective for string manipulation. All of the information gathered from Reddit will be processed by Python scripts. The 
+Python scripts will be running on the Ubuntu Server. Ultimately, Reddit Bot will return information to the user in the form of text or strings and therefore the formatting of 
+the response is crucial. The team intends to implement functionality within Reddit Bot to allow the content of a Reddit post to be posted within a Discord Server.
