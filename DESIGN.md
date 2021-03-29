@@ -20,7 +20,7 @@ they want by including keywords when it interacts with the bot. For example, the
 specify the topic they are interested in, the popularity filter, and the number of posts/subreddits they want the bot to display.
 
 
-  Reddit bot is a good solution to the problem because it will provide information from Reddit.com without the user needing to leave Discord. The bot is providing analytical results based on specific inquires rather than having a conversation with user. The bot will provide users with multiple links all at once. This will save users the time from manually searching for topics and viewing one post at a time. Furthermore, users will be able to share 
+  Reddit bot is a good solution to the problem because it will provide information from Reddit.com without the user needing to leave Discord. The bot is providing analytical results based on specific inquires rather than having a conversation with users. The bot will provide users with multiple links all at once. This will save users the time from manually searching for topics and viewing one post at a time. Furthermore, users will be able to share 
 reddit content more easily with friends.
 
  Tagline: A simplistic way to search and share content found on Reddit within Discord
