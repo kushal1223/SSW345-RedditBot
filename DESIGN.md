@@ -29,23 +29,23 @@ reddit content more easily with friends.
   
 <h2>Use Case 1: Search for posts containing a specific keyword(s)</h2>
 
-<h2>1. Preconditions</h2>
+<h3>1. Preconditions</h3>
 
    Reddit Search Bot is installed on Discord
 
-<h2>2. Main Flow</h2>
+<h3>2. Main Flow</h3>
 
    User searches for Reddit posts related to specific keywords using Discord[S1]. Bot displays a list of posts related to the keywords including the comments and the usernames
    of the post creators[S2].
 
 
-<h2>3. Subflows</h2>
+<h3>3. Subflows</h3>
 
    [S1] User types in a keyword on Discord with the search function and with certain filters i.e. number of upvotes, popularity, recency, number of posts, etc.
     
    [S2] Bot will return a list of posts containing the keyword.  
 
-<h2>4. Alternative Flows</h2>
+<h3>4. Alternative Flows</h3>
 
    [E1] No posts related to the keyword found
     
@@ -54,22 +54,22 @@ reddit content more easily with friends.
 
 <h2>Use Case 2: Search for Subreddits about a specific keyword</h2>
 
-<h2>1. Preconditions</h2>
+<h3>1. Preconditions</h3>
 
    Reddit Search Bot is installed on Discord
 
-<h2>2. Main Flow</h2>
+<h3>2. Main Flow</h3>
 
    User searches for a specific keyword on discord with specific filters[S1]. Bot displays a list of Subreddits containing the keyword[S2].
 
 
-<h2>3. Subflows</h2>
+<h3>3. Subflows</h3>
 
    [S1] User types in a keyword on Discord with the search function and with certain filters i.e. popularity, number of posts, etc.
    
    [S2] Bot will return a list of Subreddit titles with hyperlinks containing the keyword.  
   
-<h2>4. Alternative Flows</h2>
+<h3>4. Alternative Flows</h3>
 
    [E1] No Subreddits exist with keyword.
    
