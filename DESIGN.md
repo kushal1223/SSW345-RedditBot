@@ -7,45 +7,45 @@ I pledge my honor to have abided by the Stevens Honor System - KP, SD, CK
 
 <h1>Problem Statement:
   
-  <h3>Considering the scope of the internet, a lot of sites offer information to a user. One website that is considered to be a hub for almost any type of information is Reddit.
+  Considering the scope of the internet, a lot of sites offer information to a user. One website that is considered to be a hub for almost any type of information is Reddit.
   Reddit is used by millions of people daily, just like the telecommunication platform Discord. This platform allows users to communicate with friends via text and voice chat.
   Currently, there is no method to share large amounts of information from Reddit on Discord quickly and efficiently. Since Discord is one of the biggest communication platforms,
   there should be a way to share information from one of the largest information platforms in a fast and concise fashion.
 
 <h1>Bot Description:
   
-  <h3>The bot will gather information from Reddit.com and will post the information it collected for the user on Discord in the form of text. There is a lot of information the bot
+  The bot will gather information from Reddit.com and will post the information it collected for the user on Discord in the form of text. There is a lot of information the bot
 will be able to gather from Reddit such as the URL of the post, the content within the post, the user who created the post, etc. The user will specify what type of information
 they want by including keywords when it interacts with the bot. For example, the user can specify if they want to search by posts or search by subreddits. Then, they can 
 specify the topic they are interested in, the popularity filter, and the number of posts/subreddits they want the bot to display.
 
 
-<h3>The bot is a good solution to the problem because it will provide information from Reddit.com without the user needing to leave Discord. The Reddit Bot will provide users 
+  The bot is a good solution to the problem because it will provide information from Reddit.com without the user needing to leave Discord. The Reddit Bot will provide users 
 with multiple links all at once. This will save users the time from manually searching for topics and viewing one post at a time. Furthermore, users will be able to share 
 reddit content more easily with friends.
 
   
 <h1>Use Cases:
   
-<h2>Use Case 1: Search for posts containing a specific keyword(s)<h2>
+<h2>Use Case 1: Search for posts containing a specific keyword(s)</h2>
 
-1. Preconditions
+<h2>1. Preconditions</h2>
 
    Reddit Search Bot is installed on Discord
 
-2. Main Flow
+<h2>2. Main Flow</h2>
 
    User searches for Reddit posts related to specific keywords using Discord[S1]. Bot displays a list of posts related to the keywords including the comments and the usernames
    of the post creators[S2].
 
 
-3. Subflows
+<h2>3. Subflows</h2>
 
     [S1] User types in a keyword on Discord with the search function and with certain filters i.e. number of upvotes, popularity, recency, number of posts, etc.
     
     [S2] Bot will return a list of posts containing the keyword.  
 
-4. Alternative Flows
+<h2>4. Alternative Flows</h2>
 
     [E1] No posts related to the keyword found
     
@@ -55,22 +55,22 @@ reddit content more easily with friends.
 
 <h2>Use Case 2: Search for Subreddits about a specific keyword<h2>
 
-1. Preconditions
+<h2>1. Preconditions</h2>
 
    Reddit Search Bot is installed on Discord
 
-2. Main Flow
+<h2>2. Main Flow</h2>
 
    User searches for a specific keyword on discord with specific filters[S1]. Bot displays a list of Subreddits containing the keyword[S2].
 
 
-3. Subflows
+<h2>3. Subflows</h2>
 
    [S1] User types in a keyword on Discord with the search function and with certain filters i.e. popularity, number of posts, etc.
    
    [S2] Bot will return a list of Subreddit titles with hyperlinks containing the keyword.  
   
-4. Alternative Flows
+<h2>4. Alternative Flows</h2>
 
    [E1] No Subreddits exist with keyword.
    
@@ -85,7 +85,7 @@ reddit content more easily with friends.
 
 ![Design Milestone (1)](https://user-images.githubusercontent.com/62805944/112772320-18794d00-8ffe-11eb-92dc-9b55ba928f72.png)
 
-<h5>Discord is the front end interface between the user and Reddit Bot. Discord provides and maintains an API Wrapper called “discord.py” that allows for a bot to monitor a discord 
+Discord is the front end interface between the user and Reddit Bot. Discord provides and maintains an API Wrapper called “discord.py” that allows for a bot to monitor a discord 
 server and adapt to given inputs. This is great for our bot because we won’t have to write code from scratch to implement this functionality and we can spend more time on 
 higher-level functionality. For our specific project, we will have Reddit Bot perform actions only when a user starts a message with “-r”. This is to ensure that Reddit Bot is
 only activated when intended. After the bot processes the user’s request and gains all necessary information from Reddit, the bot will communicate back to the user by sending
