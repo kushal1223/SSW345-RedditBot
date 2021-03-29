@@ -41,15 +41,15 @@ reddit content more easily with friends.
 
 <h2>3. Subflows</h2>
 
-    [S1] User types in a keyword on Discord with the search function and with certain filters i.e. number of upvotes, popularity, recency, number of posts, etc.
+   [S1] User types in a keyword on Discord with the search function and with certain filters i.e. number of upvotes, popularity, recency, number of posts, etc.
     
-    [S2] Bot will return a list of posts containing the keyword.  
+   [S2] Bot will return a list of posts containing the keyword.  
 
 <h2>4. Alternative Flows</h2>
 
-    [E1] No posts related to the keyword found
+   [E1] No posts related to the keyword found
     
-    [E2] Number of posts in the filter exceeds the allowed limit from Bot.
+   [E2] Number of posts in the filter exceeds the allowed limit from Bot.
 
 
 
