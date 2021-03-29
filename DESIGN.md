@@ -5,14 +5,14 @@ Kushal Patel, Spencer Drucker, Christian Kubelle
 I pledge my honor to have abided by the Stevens Honor System - KP, SD, CK
 
 
-<h1>Problem Statement:
+<h1>Problem Statement:</h1>
   
   Considering the scope of the internet, a lot of sites offer information to a user. One website that is considered to be a hub for almost any type of information is Reddit.
   Reddit is used by millions of people daily, just like the telecommunication platform Discord. This platform allows users to communicate with friends via text and voice chat.
   Currently, there is no method to share large amounts of information from Reddit on Discord quickly and efficiently. Since Discord is one of the biggest communication platforms,
   there should be a way to share information from one of the largest information platforms in a fast and concise fashion.
 
-<h1>Bot Description:
+<h1>Bot Description:</h1>
   
   The bot will gather information from Reddit.com and will post the information it collected for the user on Discord in the form of text. There is a lot of information the bot
 will be able to gather from Reddit such as the URL of the post, the content within the post, the user who created the post, etc. The user will specify what type of information
