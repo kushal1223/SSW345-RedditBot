@@ -24,7 +24,8 @@ specify the topic they are interested in, the popularity filter, and the number 
 with multiple links all at once. This will save users the time from manually searching for topics and viewing one post at a time. Furthermore, users will be able to share 
 reddit content more easily with friends.
 
-  
+ Tagline: A simplistic way to search and share content found on Reddit within Discord
+
 <h1>Use Cases:
   
 <h2>Use Case 1: Search for posts containing a specific keyword(s)</h2>
@@ -80,11 +81,17 @@ reddit content more easily with friends.
  
 ![Gather Info Bot StoryBoard (4)](https://user-images.githubusercontent.com/62805944/112771149-7b67e580-8ff8-11eb-9e11-106c0d74c2a2.png)
 
-![SSW 345 Project Sequence Diagram](https://user-images.githubusercontent.com/62805944/112772899-66dc1b00-9001-11eb-9d62-1e7fdeafb3b5.JPG)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/62805944/112772899-66dc1b00-9001-11eb-9d62-1e7fdeafb3b5.JPG" />
+</p>
+
 
 <h1>Architecture Design:</h1>
 
-![Design Milestone (1)](https://user-images.githubusercontent.com/62805944/112772320-18794d00-8ffe-11eb-92dc-9b55ba928f72.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/62805944/112772320-18794d00-8ffe-11eb-92dc-9b55ba928f72.png?" />
+</p>
+
 
 Discord is the front end interface between the user and Reddit Bot. Discord provides and maintains an API Wrapper called “discord.py” that allows for a bot to monitor a discord 
 server and adapt to given inputs. This is great for our bot because we won’t have to write code from scratch to implement this functionality and we can spend more time on 
