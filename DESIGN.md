@@ -52,7 +52,7 @@ reddit content more easily with friends.
    [E2] Number of posts in the filter exceeds the allowed limit from Bot.
 
 
-<h2>Use Case 2: Search for Subreddits about a specific keyword<h2>
+<h2>Use Case 2: Search for Subreddits about a specific keyword</h2>
 
 <h2>1. Preconditions</h2>
 
