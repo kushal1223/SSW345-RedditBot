@@ -52,7 +52,6 @@ reddit content more easily with friends.
    [E2] Number of posts in the filter exceeds the allowed limit from Bot.
 
 
-
 <h2>Use Case 2: Search for Subreddits about a specific keyword<h2>
 
 <h2>1. Preconditions</h2>
@@ -80,6 +79,8 @@ reddit content more easily with friends.
 <h1>Design Sketches:</h1>
  
 ![Gather Info Bot StoryBoard (4)](https://user-images.githubusercontent.com/62805944/112771149-7b67e580-8ff8-11eb-9e11-106c0d74c2a2.png)
+
+![SSW 345 Project Sequence Diagram](https://user-images.githubusercontent.com/62805944/112772899-66dc1b00-9001-11eb-9d62-1e7fdeafb3b5.JPG)
 
 <h1>Architecture Design:</h1>
 
