@@ -19,3 +19,6 @@
 
 ### A Screenshot of our working Reddit API
 ![redditapi](https://user-images.githubusercontent.com/62805944/114334641-011b8300-9b19-11eb-9c6b-0910d0ae9247.PNG)
+
+### A Screenshot of successful Discord Bot response
+![botresponse](https://user-images.githubusercontent.com/62805944/114337665-86a23180-9b1f-11eb-9ed0-bd32654f0710.PNG)
