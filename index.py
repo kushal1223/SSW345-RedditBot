@@ -1,6 +1,6 @@
 # bot.py
 import os
-
+import reddit
 import discord
 from dotenv import load_dotenv
 
@@ -18,7 +18,7 @@ async def on_ready():
 async def on_message(message):
     if client.user.id != message.author.id:
         if '-r' in message.content:
-          await message.channel.send('Hi')
+          await message.channel.send(reddit.main("soccer"))
 
 
 client.run(token)
