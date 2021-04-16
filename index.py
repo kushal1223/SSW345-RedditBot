@@ -8,6 +8,11 @@ load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
 client = discord.Client()
 
+@commands.command()
+@commands.is_owner()
+  async def shutdown(self, ctx):
+     await ctx.bot.logout()
+
 
 @client.event
 async def on_ready():
@@ -17,8 +22,18 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if client.user.id != message.author.id:
-        if '-r' in message.content:
-          await message.channel.send(reddit.main("soccer"))
+
+        #List of arguments, splits arguments based on spaces, lowercases all letters
+        args = message.content.lower().split()
+
+        #Only do something if message starts with '-r'
+        if args[0] == '-r':
+
+            #Example of how we can determine which function a user wants
+            if args[1] == 'subreddit':
+                await message.channel.send(reddit.main(args[2]))
+            if args[1] == 'search':
+                await message.channel.send(reddit.main(args[2]))
 
 
 client.run(token)
