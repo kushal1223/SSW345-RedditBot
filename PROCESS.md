@@ -22,3 +22,7 @@
 
 ### A Screenshot of successful Discord Bot response
 ![botresponse](https://user-images.githubusercontent.com/62805944/114337665-86a23180-9b1f-11eb-9ed0-bd32654f0710.PNG)
+
+## Second Iteration - (Monday Apr 12  Sunday Apr 25)
+
+4/15/2021 - Today we met to delegate work and discuss what are the next steps we need to take. We worked with setting up the reddit portion of the bot with the discord portion. Meaning that once a user enters information in discord, the bot responds with information coming from reddit.com. We were able to get it so that if a user types a message starting with "-r" Redditbot will respond with information gathered from the soccer subreddit. The next step is to change the bots response based on user input.
