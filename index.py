@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import praw
 from discord.ext import commands
 import random
+import asyncpraw
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
@@ -25,7 +26,7 @@ with open('./secretfiles/clientid.txt', 'r') as f:
 
 
 #Reddit credentials
-reddit = praw.Reddit(
+reddit = asyncpraw.Reddit(
     client_id = clientid,
     client_secret = secretkey,
     username = username,
@@ -45,7 +46,8 @@ async def on_ready():
 @client.command()
 async def random_post(ctx, query):
     list = []
-    for submission in reddit.subreddit(query).hot(limit = 10):
+    subreddit= await reddit.subreddit(query)
+    async for submission in subreddit.hot(limit = 10):
         list.append(submission)
 
     random_sub = random.choice(list)
