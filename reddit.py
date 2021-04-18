@@ -1,3 +1,7 @@
+import asyncpraw
+import requests
+import pandas as pd
+
 
 def main(sub):
     CLIENT_ID = 'DdP1Md5hVwSP-A'
@@ -7,7 +11,7 @@ def main(sub):
         
     SECRET_KEY = secretkey
 
-    import requests
+    
 
     # note that CLIENT_ID refers to 'personal use script' and SECRET_TOKEN to 'token'
     auth = requests.auth.HTTPBasicAuth(CLIENT_ID, SECRET_KEY)
@@ -38,7 +42,7 @@ def main(sub):
     res = requests.get("https://oauth.reddit.com/r/" + sub,
                     headers=headers)
 
-    import pandas as pd
+   
     df = pd.DataFrame()  # initialize dataframe
 
     # loop through each post retrieved from GET request

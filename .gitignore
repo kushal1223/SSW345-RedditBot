@@ -3,3 +3,5 @@ pw.txt
 secretkey.txt
 __pycache__
 .vscode
+clientid.txt
+username.txt

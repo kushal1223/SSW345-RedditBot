@@ -3,32 +3,59 @@ import os
 import reddit
 import discord
 from dotenv import load_dotenv
+import praw
+from discord.ext import commands
+import random
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
-client = discord.Client()
+
+#Opening secret files
+with open('./secretfiles/pw.txt', 'r') as f:
+    pw = f.read()
+
+with open('./secretfiles/secretkey.txt', 'r') as f:
+    secretkey = f.read()
+
+with open('./secretfiles/username.txt', 'r') as f:
+    username = f.read()
+
+with open('./secretfiles/clientid.txt', 'r') as f:
+    clientid = f.read()
 
 
+#Reddit credentials
+reddit = praw.Reddit(
+    client_id = clientid,
+    client_secret = secretkey,
+    username = username,
+    password = pw,
+    user_agent = "RedditBot"
+)
+
+client = commands.Bot(command_prefix='-r ')
+
+
+#Posts in terminal that bot is running
 @client.event
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
+#Posts a random post when given a subreddit syntax '-r random_post subredditname'
+@client.command()
+async def random_post(ctx, query):
+    list = []
+    for submission in reddit.subreddit(query).hot(limit = 10):
+        list.append(submission)
 
-@client.event
-async def on_message(message):
-    if client.user.id != message.author.id:
+    random_sub = random.choice(list)
+    name = random_sub.title
+    url = random_sub.url
 
-        #List of arguments, splits arguments based on spaces, lowercases all letters
-        args = message.content.lower().split()
+    em = discord.Embed(title = name)
+    em.set_image(url = url)
 
-        #Only do something if message starts with '-r'
-        if args[0] == '-r':
 
-            #Example of how we can determine which function a user wants
-            if args[1] == 'subreddit':
-                await message.channel.send(reddit.main(args[2]))
-            if args[1] == 'search':
-                await message.channel.send(reddit.main(args[2]))
-
+    await ctx.send(embed = em)
 
 client.run(token)
