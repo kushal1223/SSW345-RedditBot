@@ -8,11 +8,6 @@ load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
 client = discord.Client()
 
-@commands.command()
-@commands.is_owner()
-  async def shutdown(self, ctx):
-     await ctx.bot.logout()
-
 
 @client.event
 async def on_ready():
