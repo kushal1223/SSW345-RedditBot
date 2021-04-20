@@ -60,4 +60,18 @@ async def random_post(ctx, query):
 
     await ctx.send(embed = em)
 
+@client.command()
+async def search_all(ctx, query):
+
+    list = []
+    subreddit = await reddit.subreddit("all")
+    async for submission in subreddit.search(query, limit = 5):
+        list.append(submission)
+
+    em = discord.Embed(title = list[0].title)
+    em.setURL(url = reddit.config.reddit_url + list[0].permalink)
+
+    await ctx.send(embed = em)
+
+
 client.run(token)

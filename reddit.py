@@ -32,11 +32,12 @@ reddit = praw.Reddit(
 
 
 #Test Code here
-
-#list = reddit.subreddits.search_by_name("stocks")
-
+'''
+Returns url in top 
 for submission in reddit.subreddit("all").hot(limit=25):
-    print(submission.title)
+    print(reddit.config.reddit_url + submission.permalink)
+'''
 
-#for post in list:
-#    print(post)
+
+for submission in reddit.subreddit("all").search("yellow car", limit = 5):
+    print(submission.title)
