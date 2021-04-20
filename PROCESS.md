@@ -32,7 +32,7 @@
 
 4/19/2021- Today we delegated tasks to work on within the index.py file. We assigned the following functions: search subreddits, search all of Reddit, return posts based on search. We also made secondary tasks such as filtering by hot or top posts, and the number of searches. 
 
-	Spencer: Help command, Top command, Meme command.
-	Christian: Return Reddit posts based on search.
-	Kushal: Returning Subreddits .
+Spencer: Help command, Top command, Meme command.
+Christian: Return Reddit posts based on search.
+Kushal: Returning Subreddits .
 
