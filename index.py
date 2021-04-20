@@ -68,10 +68,14 @@ async def search_all(ctx, query):
     async for submission in subreddit.search(query, limit = 5):
         list.append(submission)
 
-    em = discord.Embed(title = list[0].title)
-    em.setURL(url = reddit.config.reddit_url + list[0].permalink)
+    
 
-    await ctx.send(embed = em)
+    for i in range(0,5):
+        em = discord.Embed(title = list[i].title, url = reddit.config.reddit_url + list[i].permalink)
+        em.set_image(url = list[i].url)
+        em.add_field(name = "Author: ",  value = list[i].author)
+        em.add_field(name = "Number of upvotes", value = list[i].score)
+        await ctx.send(embed = em)
 
 
 client.run(token)
