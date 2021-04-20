@@ -26,3 +26,12 @@
 ## Second Iteration - (Monday Apr 12  Sunday Apr 25)
 
 4/15/2021 - Today we met to delegate work and discuss what are the next steps we need to take. We worked with setting up the reddit portion of the bot with the discord portion. Meaning that once a user enters information in discord, the bot responds with information coming from reddit.com. We were able to get it so that if a user types a message starting with "-r" Redditbot will respond with information gathered from the soccer subreddit. The next step is to change the bots response based on user input.
+
+4/17/2021- Christian worked on connecting the Reddit API to the Discord files. Spencer worked on making the Discord function asynchronous. Kushal worked on editing Reddit and Discord files.
+
+
+4/19/2021- Today we delegated tasks to work on within the index.py file. We assigned the following functions: search subreddits, search all of Reddit, return posts based on search. We also made secondary tasks such as filtering by hot or top posts, and the number of searches. 
+	Spencer: Help command, Top command, Meme command
+	Christian: Return Reddit posts based on search
+	Kushal: Returning Subreddits 
+
