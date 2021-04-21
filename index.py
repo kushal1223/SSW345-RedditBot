@@ -61,20 +61,28 @@ async def random_post(ctx, query):
     await ctx.send(embed = em)
 
 @client.command()
-async def search_all(ctx, query):
+async def search_post(ctx, query, subredditname = "all"):
 
     list = []
-    subreddit = await reddit.subreddit("all")
-    async for submission in subreddit.search(query, limit = 5):
+    subreddit = await reddit.subreddit(subredditname)
+    async for submission in subreddit.search(query, limit = 10):
         list.append(submission)
 
     
 
-    for i in range(0,5):
-        em = discord.Embed(title = list[i].title, url = reddit.config.reddit_url + list[i].permalink)
-        em.set_image(url = list[i].url)
+    for i in range(0,10):
+        em = discord.Embed(title = list[i].title[0:256], url = reddit.config.reddit_url + list[i].permalink, video = list[i].url)
         em.add_field(name = "Author: ",  value = list[i].author)
-        em.add_field(name = "Number of upvotes", value = list[i].score)
+        em.add_field(name = "Number of upvotes: ", value = list[i].score)
+        em.add_field(name = "Subreddit: ", value = list[i].subreddit)
+        print(list[i].url)
+
+        if(list[i].is_self):
+            em.add_field(name = "Description:", value = list[i].selftext[0:500], inline= False)
+        if (list[i].url[-4:] == '.jpg'):
+            em.set_image(url = list[i].url)
+
+
         await ctx.send(embed = em)
 
 

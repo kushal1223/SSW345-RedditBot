@@ -38,6 +38,7 @@ for submission in reddit.subreddit("all").hot(limit=25):
     print(reddit.config.reddit_url + submission.permalink)
 '''
 
-
+'''
 for submission in reddit.subreddit("all").search("yellow car", limit = 5):
     print(submission.title)
+'''
