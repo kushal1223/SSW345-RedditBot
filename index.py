@@ -60,4 +60,22 @@ async def random_post(ctx, query):
 
     await ctx.send(embed = em)
 
+@client.command()
+async def search_subreddit(ctx, query):
+
+    #subreddits = await reddit.subreddits(query)
+    list = []
+    async for subreddit in reddit.subreddits.search(query, limit=10):
+        list.append(subreddit)
+
+
+    for i in range(0,10):
+        em = discord.Embed(title = list[i].display_name[0:256], url = "https://www.reddit.com/r/"+list[i].display_name+"/")
+        em.add_field(name = "Subreddit: ", value = list[i].display_name)
+        em.add_field(name = "Subscribers: ", value = list[i].subscribers)
+        if(list[i].public_description != ""):
+            em.add_field(name = "Description:", value = list[i].public_description[0:500], inline= False)
+
+        await ctx.send(embed = em)
+
 client.run(token)
