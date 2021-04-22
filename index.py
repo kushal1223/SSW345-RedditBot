@@ -74,27 +74,42 @@ async def meme(ctx):
     async for submission in subreddit.hot(limit = 100):
         list.append(submission)
 
-    for i in range(0,1):
-        random_sub = random.choice(list)
-        name = random_sub.title
-        url = random_sub.url
-        em = discord.Embed(title  = list[i].title[:256], url=reddit.config.reddit_url + list[i].permalink)
-        em.set_image(url = url)
-        await ctx.send(embed = em)
+
+    random_sub = random.choice(list)
+    name = random_sub.title
+    url = random_sub.url
+    em = discord.Embed(title = name[0:256], 
+                            url = reddit.config.reddit_url + random_sub.permalink, 
+                            )
+    em.add_field(name = "Author: ",  value = random_sub.author)
+    em.add_field(name = "Number of upvotes: ", value = random_sub.score)
+    em.add_field(name = "Subreddit: ", value = random_sub.subreddit)
+
+    if(random_sub.is_self):
+            em.add_field(name = "Description:", value = random_sub.selftext[0:500], inline= False)
+    if (random_sub.url[-4:] == '.jpg'):
+            em.set_image(url = random_sub.url)
+    await ctx.send(embed = em)
 
 @client.command(brief= "    Return top 10 posts from all of Reddit")
 async def top(ctx):
     list = []
     subreddit= await reddit.subreddit("all")
-    async for submission in subreddit.top( time_filter= 'day', limit = 10):
+    async for submission in subreddit.top( time_filter= 'day', limit = 11):
         list.append(submission)
     for i in range(0,10):
-        random_sub = random.choice(list)
-        name = random_sub.title
-        url = random_sub.url
-        em = discord.Embed(title  = list[i].title[:256], url=reddit.config.reddit_url + list[i].permalink)
-        em.set_image(url = list[i].url)
 
+        em = discord.Embed(title = list[i].title[:256], 
+                            url = reddit.config.reddit_url + list[i].permalink, 
+                            )
+        em.add_field(name = "Author: ",  value = list[i].author)
+        em.add_field(name = "Number of upvotes: ", value = list[i].score)
+        em.add_field(name = "Subreddit: ", value = list[i].subreddit)
+
+        if(list[i].is_self):
+            em.add_field(name = "Description:", value = list[i].selftext[0:500], inline= False)
+        if (list[i].url[-4:] == '.jpg'):
+            em.set_image(url = list[i].url)
 
         await ctx.send(embed = em)
 
