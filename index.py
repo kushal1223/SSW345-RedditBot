@@ -63,24 +63,25 @@ async def random_post(ctx, query):
 @client.command()
 async def search_post(ctx, query, subredditname = "all"):
 
-    list = []
+    list_of_rposts = []
     subreddit = await reddit.subreddit(subredditname)
     async for submission in subreddit.search(query, limit = 10):
-        list.append(submission)
+        list_of_rposts.append(submission)
 
     
 
     for i in range(0,10):
-        em = discord.Embed(title = list[i].title[0:256], url = reddit.config.reddit_url + list[i].permalink, video = list[i].url)
-        em.add_field(name = "Author: ",  value = list[i].author)
-        em.add_field(name = "Number of upvotes: ", value = list[i].score)
-        em.add_field(name = "Subreddit: ", value = list[i].subreddit)
-        print(list[i].url)
+        em = discord.Embed(title = list_of_rposts[i].title[0:256], 
+                            url = reddit.config.reddit_url + list_of_rposts[i].permalink, 
+                            )
+        em.add_field(name = "Author: ",  value = list_of_rposts[i].author)
+        em.add_field(name = "Number of upvotes: ", value = list_of_rposts[i].score)
+        em.add_field(name = "Subreddit: ", value = list_of_rposts[i].subreddit)
 
-        if(list[i].is_self):
-            em.add_field(name = "Description:", value = list[i].selftext[0:500], inline= False)
-        if (list[i].url[-4:] == '.jpg'):
-            em.set_image(url = list[i].url)
+        if(list_of_rposts[i].is_self):
+            em.add_field(name = "Description:", value = list_of_rposts[i].selftext[0:500], inline= False)
+        if (list_of_rposts[i].url[-4:] == '.jpg'):
+            em.set_image(url = list_of_rposts[i].url)
 
 
         await ctx.send(embed = em)
