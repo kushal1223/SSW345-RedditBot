@@ -46,3 +46,9 @@ We also started adding more descriptive cards to our project board. We are now u
 
 ![image](https://user-images.githubusercontent.com/44238558/115638885-3fffc480-a2e1-11eb-9e16-09c57d6bb26b.png)
 
+We now have multiple branches based on the work we are delegating. We waited to create multiple branches until our main architecture was created so that when we all merge branches, we should not have to worry too much
+
+### Screenshot of our active branches
+![image](https://user-images.githubusercontent.com/44238558/115639218-0f6c5a80-a2e2-11eb-9715-37098db72ca4.png)
+
+
