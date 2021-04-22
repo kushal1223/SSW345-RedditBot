@@ -36,3 +36,5 @@ Spencer: Help command, Top command, Meme command.
 Christian: Return Reddit posts based on search.
 Kushal: Returning Subreddits .
 
+4/21/2021- Today we met to discuss the progress of tasks we delagated a few days ago. Spencer was able to succesfully make the bot respond to the help, top, and meme commands. Christian was able tp successfully return reddit posts based on search. Kushal was able to successfully return subreddits based on search. Each group member created their own branch to work on these tasks. Furthermore, each group member created their own pull request to be reviewed by the other groupmates. We will take a look at each other's commits and comment on anything we feel could be added or done better. We plan on fixing these issues by the next meeting so that we can all merge these functions to our main branch.
+
