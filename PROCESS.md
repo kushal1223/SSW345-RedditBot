@@ -36,5 +36,13 @@ Spencer: Help command, Top command, Meme command.
 Christian: Return Reddit posts based on search.
 Kushal: Returning Subreddits .
 
-4/21/2021- Today we met to discuss the progress of tasks we delagated a few days ago. Spencer was able to succesfully make the bot respond to the help, top, and meme commands. Christian was able to successfully return reddit posts based on search. Kushal was able to successfully return subreddits based on search. Each group member created their own branch to work on these tasks. Furthermore, each group member created their own pull request to be reviewed by the other groupmates. We will take a look at each other's commits and comment on anything we feel could be added or done better. We plan on fixing these issues by the next meeting so that we can all merge these functions to our main branch.
+4/21/2021- Today we met to discuss the progress of tasks we delagated a few days ago. Spencer was able to successfully make the bot respond to the help, top, and meme commands. Christian was able to successfully return reddit posts based on search. Kushal was able to successfully return subreddits based on search. Each group member created their own branch to work on these tasks. Furthermore, each group member created their own pull request to be reviewed by the other groupmates. We will take a look at each other's commits and comment on anything we feel could be added or done better. We plan on fixing these issues by the next meeting so that we can all merge these functions to our main branch. 
+### Image of our pull requests
+![image](https://user-images.githubusercontent.com/44238558/115638752-f4e5b180-a2e0-11eb-98da-76a5101b2195.png)
+
+We also started adding more descriptive cards to our project board. We are now using issues within our project board which allows us to assign them to each other and use labels to highlight their importance.
+
+### Screenshot of our Project Board currently
+
+![image](https://user-images.githubusercontent.com/44238558/115638885-3fffc480-a2e1-11eb-9e16-09c57d6bb26b.png)
 
