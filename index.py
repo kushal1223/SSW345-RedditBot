@@ -67,6 +67,32 @@ async def random_post(ctx, query):
 
     await ctx.send(embed = em)
 
+@client.command()
+async def search_post(ctx, query, subredditname = "all"):
+
+    list_of_rposts = []
+    subreddit = await reddit.subreddit(subredditname)
+    async for submission in subreddit.search(query, limit = 10):
+        list_of_rposts.append(submission)
+
+    
+
+    for i in range(0,10):
+        em = discord.Embed(title = list_of_rposts[i].title[0:256], 
+                            url = reddit.config.reddit_url + list_of_rposts[i].permalink, 
+                            )
+        em.add_field(name = "Author: ",  value = list_of_rposts[i].author)
+        em.add_field(name = "Number of upvotes: ", value = list_of_rposts[i].score)
+        em.add_field(name = "Subreddit: ", value = list_of_rposts[i].subreddit)
+
+        if(list_of_rposts[i].is_self):
+            em.add_field(name = "Description:", value = list_of_rposts[i].selftext[0:500], inline= False)
+        if (list_of_rposts[i].url[-4:] == '.jpg'):
+            em.set_image(url = list_of_rposts[i].url)
+
+
+        await ctx.send(embed = em)
+         
 @client.command(brief = "    Return a random meme")
 async def meme(ctx):
     list = []
