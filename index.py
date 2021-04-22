@@ -85,6 +85,7 @@ async def search_subreddit(ctx, query):
 
         await ctx.send(embed = em)
 
+@client.command()
 async def search_post(ctx, query, subredditname = "all"):
 
     list_of_rposts = []
