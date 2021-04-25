@@ -56,25 +56,30 @@ We now have multiple branches based on the work we are delegating. We waited to 
 ### -r help
 ### Returns a post that provides the user with all available commands
 
+
 ![-r help](https://user-images.githubusercontent.com/62805944/116010837-7f832500-a5ef-11eb-82a6-886c8842ea23.PNG)
 
 ### -r search post
 ### Returns top ten posts containing the keyword (can be in a specific subreddit)
+
 
 ![-r search post](https://user-images.githubusercontent.com/62805944/116010846-91fd5e80-a5ef-11eb-9de6-5963cd5d81a8.PNG)
 
 ### -r search subreddit
 ### Returns the top ten subreddits relating to the keyword
 
+
 ![-r search subreddit](https://user-images.githubusercontent.com/62805944/116010850-975aa900-a5ef-11eb-8bd8-4e7f53c071d5.PNG)
 
 ### -r meme
 ### Returns a meme
 
+
 ![-r meme](https://user-images.githubusercontent.com/62805944/116010856-9cb7f380-a5ef-11eb-8122-fd490e95b0b3.PNG)
 
 ### -r top
 ### Returns the top ten posts of reddit of the day
+
 
 ![-r top updated](https://user-images.githubusercontent.com/62805944/116011069-0258af80-a5f1-11eb-9f7e-2375fe146c44.PNG)
 
