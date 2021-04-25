@@ -51,5 +51,5 @@ We now have multiple branches based on the work we are delegating. We waited to 
 ### Screenshot of our active branches
 ![image](https://user-images.githubusercontent.com/44238558/115639218-0f6c5a80-a2e2-11eb-9715-37098db72ca4.png)
 
-4/22/2021- We fixed most issues for our functions and merged all of our code to the main branch.
+4/22/2021- After receiving feedback from each of our group members, we spent some time trying to improve the functions that we created. We fixed most issues for our functions and merged all of our code to the main branch.
 
