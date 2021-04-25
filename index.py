@@ -75,7 +75,7 @@ async def random_post(ctx, query):
     
     except:
         em = discord.Embed(title = "Issue")
-        em.add_field(name=query, value='Subreddit not found', inline= False )
+        em.add_field(name=" The " + '"'+ query +'"', value='Subreddit was not found', inline= False )
         await ctx.send(embed = em)
 
 
