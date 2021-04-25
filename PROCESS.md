@@ -51,7 +51,13 @@ We now have multiple branches based on the work we are delegating. We waited to 
 ### Screenshot of our active branches
 ![image](https://user-images.githubusercontent.com/44238558/115639218-0f6c5a80-a2e2-11eb-9715-37098db72ca4.png)
 
-4/22/2021- After receiving feedback from each of our group members, we spent some time trying to improve the functions that we created. We fixed most issues for our functions and merged all of our code to the main branch. The following images show the Reddit Bot responding to the commands that we implemented during this iteration.
+4/22/2021- After receiving feedback from each of our group members, we spent some time trying to improve the functions that we created. We fixed most issues for our functions and were able to close our pull requests after successfully merging all of our new code to the main branch. Some things that we need to continue working on include updating the help command, properly displaying a video within a post, and properly displaying the time that subreddits are created. In addition, we plan on implementing a feature to the search_post and search_subreddit command that allows users to input the amount of posts/subreddits they want the bot to return.
+
+### Image of closed pull requests
+![closed pull requests](https://user-images.githubusercontent.com/62805944/116011423-ea822b00-a5f2-11eb-9ceb-b7f0c1793dea.PNG)
+
+
+The following images show the Reddit Bot responding to the commands that we implemented during this iteration:
 
 ### -r help
 ### Returns a post that provides the user with all available commands
