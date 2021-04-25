@@ -89,9 +89,13 @@ The following images show the Reddit Bot responding to the commands that we impl
 
 ![-r top updated](https://user-images.githubusercontent.com/62805944/116011069-0258af80-a5f1-11eb-9f7e-2375fe146c44.PNG)
 
+### Example of one of our Merge Requests
+After making each our own branch, we each submitted a merge request. Similar to the lab we did in class, we assigned each other as reviewers and made comments based on improvements we can make.
+![image](https://user-images.githubusercontent.com/44238558/116011747-924c2880-a5f4-11eb-9e88-36ec3fa7687f.png)
+
 
 ### End of Iteration Two
-4/25/2021 - Today we met to discuss the end of iteration two and the progress we have made on RedditBot. Overall, we have implemented the main functionality of the bot. Going forward, we are going to focus heavily on testing and adding additional functionality/commands to the bot. Our bot is in a working state and we are going to spend the next day or two solely on testing before adding additional commands to the bot. To test the bot we will be assigning each member another person's code to look over and test. We are doing this so we can better understand each other's work and maybe find bugs that the originial developer did not account for.
+4/25/2021 - Today we met to discuss the end of iteration two and the progress we have made on RedditBot. Overall, we have implemented the main functionality of the bot. We successfully merged all of our branches into main. Going forward, we are going to focus heavily on testing and adding additional functionality/commands to the bot. Our bot is in a working state and we are going to spend the next day or two solely on testing before adding additional commands to the bot. To test the bot we will be assigning each member another person's code to look over and test. We are doing this so we can better understand each other's work and maybe find bugs that the originial developer did not account for.
 
 ### End of Iteration Two Progress Board
 ![image](https://user-images.githubusercontent.com/44238558/116011692-397c9000-a5f4-11eb-9c6c-3b22fd7d673b.png)
