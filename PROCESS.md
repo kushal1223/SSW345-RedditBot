@@ -53,3 +53,5 @@ We now have multiple branches based on the work we are delegating. We waited to 
 
 4/22/2021- After receiving feedback from each of our group members, we spent some time trying to improve the functions that we created. We fixed most issues for our functions and merged all of our code to the main branch.
 
+### End of Iteration Two
+4/25/2021 - Today we met to discuss the end of iteration two and the progress we have made on RedditBot. Overall, we have implemented the main functionality of the bot. Going forward, we are going to focus heavily on testing and adding additional functionality/commands to the bot. Our bot is in a working state and we are going to spend the next day or two solely on testing before adding additional commands to the bot. To test the bot we will be assigning each member another person's code to look over and test. We are doing this so we can better understand each other's work and maybe find bugs that the originial developer did not account for.
