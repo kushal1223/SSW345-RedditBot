@@ -51,21 +51,34 @@ async def on_ready():
 #Posts a random post when given a subreddit syntax '-r random_post subredditname'
 @client.command(brief= "<subreddit> Returns a random post from a certain subreddit")
 async def random_post(ctx, query):
-    list = []
-    subreddit= await reddit.subreddit(query)
-    async for submission in subreddit.hot(limit = 10):
-        list.append(submission)
+    try:
+        list = []
+        subreddit= await reddit.subreddit(query)
+        async for submission in subreddit.hot(limit = 10):
+            list.append(submission)
 
 
-    random_sub = random.choice(list)
-    name = random_sub.title
-    url = random_sub.url
+        random_sub = random.choice(list)
+        em = discord.Embed(title = random_sub.title[:256], 
+                            url = reddit.config.reddit_url + random_sub.permalink, 
+                            )
+        em.add_field(name = "Author: ",  value = random_sub.author)
+        em.add_field(name = "Number of upvotes: ", value = random_sub.score)
+        em.add_field(name = "Subreddit: ", value = random_sub.subreddit)
 
-    em = discord.Embed(title = name)
-    em.set_image(url = url)
+        if(random_sub.is_self):
+            em.add_field(name = "Description:", value = random_sub.selftext[0:500], inline= False)
+        if (random_sub.url[-4:] == '.jpg'):
+            em.set_image(url = random_sub.url)
+
+        await ctx.send(embed = em)
+    
+    except:
+        em = discord.Embed(title = "Issue")
+        em.add_field(name=query, value='Subreddit not found', inline= False )
+        await ctx.send(embed = em)
 
 
-    await ctx.send(embed = em)
 
 @client.command(brief= "<keyword> Returns the top subreddits with the phrase")
 async def search_subreddit(ctx, query):
