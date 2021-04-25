@@ -36,7 +36,7 @@ reddit = asyncpraw.Reddit(
     password = pw,
     user_agent = "RedditBot"
 )
-client = commands.Bot(command_prefix='-r ')
+client = commands.Bot(command_prefix='-r ', help_command=None)
 
 
 
@@ -49,7 +49,7 @@ async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
 #Posts a random post when given a subreddit syntax '-r random_post subredditname'
-@client.command(brief= "    Return a random post from a specified subreddit")
+@client.command(brief= "<subreddit> Returns a random post from a certain subreddit")
 async def random_post(ctx, query):
     list = []
     subreddit= await reddit.subreddit(query)
@@ -67,7 +67,7 @@ async def random_post(ctx, query):
 
     await ctx.send(embed = em)
 
-@client.command()
+@client.command(brief= "<keyword> Returns the top subreddits with the phrase")
 async def search_subreddit(ctx, query):
 
     #subreddits = await reddit.subreddits(query)
@@ -85,7 +85,7 @@ async def search_subreddit(ctx, query):
 
         await ctx.send(embed = em)
 
-@client.command()
+@client.command(brief= "<keyword> Return a top post containing a keyword")
 async def search_post(ctx, query, subredditname = "all"):
 
     list_of_rposts = []
@@ -111,7 +111,7 @@ async def search_post(ctx, query, subredditname = "all"):
 
         await ctx.send(embed = em)
          
-@client.command(brief = "    Return a random meme")
+@client.command(brief = "Return a random meme")
 async def meme(ctx):
     list = []
     subreddit= await reddit.subreddit('meme')
@@ -135,7 +135,7 @@ async def meme(ctx):
             em.set_image(url = random_sub.url)
     await ctx.send(embed = em)
 
-@client.command(brief= "    Return top 10 posts from all of Reddit")
+@client.command(brief= "Return top 10 posts from all of Reddit")
 async def top(ctx):
     list = []
     subreddit= await reddit.subreddit("all")
@@ -160,6 +160,16 @@ async def top(ctx):
 
 
 
+@client.group()
+async def help (ctx):
+    embed = discord.Embed(title = "Help")
+    embed.add_field(name='top', value='Returns the top ten posts of reddit of the day', inline= False )
+    embed.add_field(name='meme', value='Returns a meme', inline= False )
+    embed.add_field(name='search_post <keyword> <subreddit (optional)>', value='Returns top ten posts containing the keyword (can be in a specific subreddit)', inline= False )
+    embed.add_field(name='search_subreddit <keyword>', value='Returns the top ten subreddits relating to the keyword', inline= False )
+    embed.add_field(name='random_post <subreddit>', value='Returns a random post from a subreddit', inline= False )
 
 
+
+    await ctx.send(embed= embed)
 client.run(token)
