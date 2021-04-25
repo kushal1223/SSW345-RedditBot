@@ -51,5 +51,28 @@ We now have multiple branches based on the work we are delegating. We waited to 
 ### Screenshot of our active branches
 ![image](https://user-images.githubusercontent.com/44238558/115639218-0f6c5a80-a2e2-11eb-9715-37098db72ca4.png)
 
-4/22/2021- We fixed most issues for our functions and merged all of our code to the main branch.
+4/22/2021- After receiving feedback from each of our group members, we spent some time trying to improve the functions that we created. We fixed most issues for our functions and merged all of our code to the main branch. The following images show the Reddit Bot responding to the commands that we implemented during this iteration.
 
+### -r help
+
+![-r help](https://user-images.githubusercontent.com/62805944/116010837-7f832500-a5ef-11eb-82a6-886c8842ea23.PNG)
+
+### -r search post
+
+![-r search post](https://user-images.githubusercontent.com/62805944/116010846-91fd5e80-a5ef-11eb-9de6-5963cd5d81a8.PNG)
+
+### -r search subreddit
+
+![-r search subreddit](https://user-images.githubusercontent.com/62805944/116010850-975aa900-a5ef-11eb-8bd8-4e7f53c071d5.PNG)
+
+### -r meme
+
+![-r meme](https://user-images.githubusercontent.com/62805944/116010856-9cb7f380-a5ef-11eb-8122-fd490e95b0b3.PNG)
+
+### -r top
+
+![-r top](https://user-images.githubusercontent.com/62805944/116010863-a17ca780-a5ef-11eb-9e3e-df5c9b1fcc8b.PNG)
+
+
+### End of Iteration Two
+4/25/2021 - Today we met to discuss the end of iteration two and the progress we have made on RedditBot. Overall, we have implemented the main functionality of the bot. Going forward, we are going to focus heavily on testing and adding additional functionality/commands to the bot. Our bot is in a working state and we are going to spend the next day or two solely on testing before adding additional commands to the bot. To test the bot we will be assigning each member another person's code to look over and test. We are doing this so we can better understand each other's work and maybe find bugs that the originial developer did not account for.
