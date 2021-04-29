@@ -166,7 +166,29 @@ async def top(ctx):
 
         await ctx.send(embed = em)
 
+@client.command(brief= "Post the content of a reddit post given the url")
+async def print_post(ctx, url):
+    specific_post = await reddit.submission(url=url)
 
+    em = discord.Embed(title = specific_post.title[:256], 
+                        url = reddit.config.reddit_url + specific_post.permalink, 
+                        )
+    em.add_field(name = "Author: ",  value = specific_post.author)
+    em.add_field(name = "Number of upvotes: ", value = specific_post.score)
+    em.add_field(name = "Subreddit: ", value = specific_post.subreddit)
+
+    
+    if(specific_post.is_self):
+        em.add_field(name = "Description:", value = specific_post.selftext[0:500], inline= False)
+    if (specific_post.url[-4:] == '.jpg' or specific_post.url[-4:] == '.png'):
+        em.set_image(url = specific_post.url)
+    else:
+        try:
+            em.set_image(url = specific_post.preview['images'][0]['resolutions'][0]['url'])
+        except:
+            pass
+
+    await ctx.send(embed = em)
 
 
 @client.group()
