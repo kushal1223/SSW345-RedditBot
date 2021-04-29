@@ -39,10 +39,6 @@ reddit = asyncpraw.Reddit(
 client = commands.Bot(command_prefix='-r ', help_command=None)
 
 
-
-
-
-
 #Posts in terminal that bot is running
 @client.event
 async def on_ready():
@@ -68,7 +64,7 @@ async def random_post(ctx, query):
 
         if(random_sub.is_self):
             em.add_field(name = "Description:", value = random_sub.selftext[0:500], inline= False)
-        if (random_sub.url[-4:] == '.jpg'):
+        if (random_sub.url[-4:] == '.jpg' or random_sub.url[-4:] == '.png'):
             em.set_image(url = random_sub.url)
 
         await ctx.send(embed = em)
@@ -118,7 +114,7 @@ async def search_post(ctx, query, subredditname = "all"):
 
         if(list_of_rposts[i].is_self):
             em.add_field(name = "Description:", value = list_of_rposts[i].selftext[0:500], inline= False)
-        if (list_of_rposts[i].url[-4:] == '.jpg'):
+        if (list_of_rposts[i].url[-4:] == '.jpg'or list[i].url[-4:] == '.png'):
             em.set_image(url = list_of_rposts[i].url)
 
 
@@ -144,7 +140,7 @@ async def meme(ctx):
 
     if(random_sub.is_self):
             em.add_field(name = "Description:", value = random_sub.selftext[0:500], inline= False)
-    if (random_sub.url[-4:] == '.jpg'):
+    if (random_sub.url[-4:] == '.jpg' or random_sub.url[-4:] == '.png'):
             em.set_image(url = random_sub.url)
     await ctx.send(embed = em)
 
@@ -165,7 +161,7 @@ async def top(ctx):
 
         if(list[i].is_self):
             em.add_field(name = "Description:", value = list[i].selftext[0:500], inline= False)
-        if (list[i].url[-4:] == '.jpg'):
+        if (list[i].url[-4:] == '.jpg' or list[i].url[-4:] == '.png'):
             em.set_image(url = list[i].url)
 
         await ctx.send(embed = em)
