@@ -50,7 +50,7 @@ async def on_ready():
 
 #Posts a random post when given a subreddit syntax '-r random_post subredditname'
 @client.command(brief= "<subreddit> Returns a random post from a certain subreddit")
-async def random_post(ctx, query):
+async def random_post(ctx, query="all"):
     try:
         list = []
         subreddit= await reddit.subreddit(query)
@@ -89,7 +89,7 @@ async def search_subreddit(ctx, query):
 
     if not list:
         em = discord.Embed(title = "Issue")
-        em.add_field(name=" The " + '"'+ query +'"', value='Subreddit was not found', inline= False )
+        em.add_field(name=query, value=' was not found in any Subreddits', inline= False )
         await ctx.send(embed = em)
     else: 
         for i in range(len(list)):
@@ -106,39 +106,93 @@ async def search_subreddit(ctx, query):
 async def search_post(ctx, query, subredditname = "all", number="10"):
     num=int(number)
     list_of_rposts = []
-    try:
-        subreddit = await reddit.subreddit(subredditname)
+    if(subredditname.isnumeric()):
         try:
-            async for submission in subreddit.search(query, limit = num):
-                list_of_rposts.append(submission)
+                num=int(subredditname)
+                if(num<=30 and num>=1):
+                    subredditname="all"
+                    subreddit = await reddit.subreddit(subredditname)
+                    async for submission in subreddit.search(query, limit = num):
+                        list_of_rposts.append(submission)
+                    for i in range(0,num):
+                        em = discord.Embed(title = list_of_rposts[i].title[0:256], 
+                                url = reddit.config.reddit_url + list_of_rposts[i].permalink, 
+                            )
+                        em.add_field(name = "Author: ",  value = list_of_rposts[i].author)
+                        em.add_field(name = "Number of upvotes: ", value = list_of_rposts[i].score)
+                        em.add_field(name = "Subreddit: ", value = list_of_rposts[i].subreddit)
 
-        except:
+                        if(list_of_rposts[i].is_self):
+                            em.add_field(name = "Description:", value = list_of_rposts[i].selftext[0:500], inline= False)
+                        if (list_of_rposts[i].url[-4:] == '.jpg' or list_of_rposts[i].url[-4:] ==  '.png'):
+                            em.set_image(url = list_of_rposts[i].url)
+
+
+                        await ctx.send(embed = em)
+                    return
+                elif(num<=0):
+                    em = discord.Embed(title = "Issue")
+                    em.add_field(name=num , value='is too small, minimum posts is 1', inline= False )
+                    await ctx.send(embed = em)
+                    return
+                else:
+                    em = discord.Embed(title = "Issue")
+                    em.add_field(name=num , value='is too large, maximum posts is 30', inline= False )
+                    await ctx.send(embed = em)
+                    return
+
+        except: 
             em = discord.Embed(title = "Issue")
-            em.add_field(name=" The " + '"'+ subredditname +'"', value='Subreddit was not found', inline= False )
+            em.add_field(name= '"'+ query +'"', value='was not found on Reddit', inline= False )
             await ctx.send(embed = em)
             return
+    else:
+        if(num<=30 and num >=1):
+            try:
+                subreddit = await reddit.subreddit(subredditname)
+                try:
+                    async for submission in subreddit.search(query, limit = num):
+                        list_of_rposts.append(submission)
 
-        for i in range(0,num):
-            em = discord.Embed(title = list_of_rposts[i].title[0:256], 
+                except:
+                    em = discord.Embed(title = "Issue")
+                    em.add_field(name=" The " + '"'+ subredditname +'"', value='Subreddit was not found', inline= False )
+                    await ctx.send(embed = em)
+                    return
+
+                for i in range(0,num):
+                    em = discord.Embed(title = list_of_rposts[i].title[0:256], 
                             url = reddit.config.reddit_url + list_of_rposts[i].permalink, 
                             )
-            em.add_field(name = "Author: ",  value = list_of_rposts[i].author)
-            em.add_field(name = "Number of upvotes: ", value = list_of_rposts[i].score)
-            em.add_field(name = "Subreddit: ", value = list_of_rposts[i].subreddit)
+                    em.add_field(name = "Author: ",  value = list_of_rposts[i].author)
+                    em.add_field(name = "Number of upvotes: ", value = list_of_rposts[i].score)
+                    em.add_field(name = "Subreddit: ", value = list_of_rposts[i].subreddit)
 
-            if(list_of_rposts[i].is_self):
-                em.add_field(name = "Description:", value = list_of_rposts[i].selftext[0:500], inline= False)
-            if (list_of_rposts[i].url[-4:] == '.jpg' or list_of_rposts[i].url[-4:] ==  '.png'):
-                em.set_image(url = list_of_rposts[i].url)
-
-
-            await ctx.send(embed = em)
+                    if(list_of_rposts[i].is_self):
+                        em.add_field(name = "Description:", value = list_of_rposts[i].selftext[0:500], inline= False)
+                    if (list_of_rposts[i].url[-4:] == '.jpg' or list_of_rposts[i].url[-4:] ==  '.png'):
+                        em.set_image(url = list_of_rposts[i].url)
 
 
-    except:
-        em = discord.Embed(title = "Issue")
-        em.add_field(name= query +'"', value='was not found in the Subreddit', inline= False )
-        await ctx.send(embed = em)
+                    await ctx.send(embed = em)
+
+
+            except:
+                em = discord.Embed(title = "Issue")
+                em.add_field(name= '"'+ query +'"', value='was not found in the Subreddit', inline= False )
+                await ctx.send(embed = em)
+                return
+        elif(num<=0):
+                    em = discord.Embed(title = "Issue")
+                    em.add_field(name=num , value='is too small, minimum posts is 1', inline= False )
+                    await ctx.send(embed = em)
+                    return
+        else:
+                em = discord.Embed(title = "Issue")
+                em.add_field(name=num , value='is too large, maximum posts is 30', inline= False )
+                await ctx.send(embed = em)
+                return
+
 
 
 
@@ -197,7 +251,7 @@ async def help (ctx):
     embed = discord.Embed(title = "Help")
     embed.add_field(name='top', value='Returns the top ten posts of reddit of the day', inline= False )
     embed.add_field(name='meme', value='Returns a meme', inline= False )
-    embed.add_field(name='search_post <keyword> <subreddit (optional)> <number (optional)>', value='<keyword> Return top posts containing a keyword, to return a specific number of posts, use: \n "search_post <keyword> <subreddit> (use all for all of reddit) <number of posts>"', inline= False )
+    embed.add_field(name='search_post <keyword> <subreddit (optional)> <number (optional)>', value='<keyword> Return top posts containing a keyword, to return a specific number of posts, use: \n "search_post <keyword> <number of posts>"', inline= False )
     embed.add_field(name='search_subreddit <keyword>', value='Returns the top ten subreddits relating to the keyword', inline= False )
     embed.add_field(name='random_post <subreddit>', value='Returns a random post from a subreddit', inline= False )
 
