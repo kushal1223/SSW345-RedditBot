@@ -66,6 +66,11 @@ async def random_post(ctx, query="all"):
             em.add_field(name = "Description:", value = random_sub.selftext[0:500], inline= False)
         if (random_sub.url[-4:] == '.jpg' or random_sub.url[-4:] == '.png'):
             em.set_image(url = random_sub.url)
+        else:
+            try:
+                em.set_image(url = list_of_rposts[i].preview['images'][0]['resolutions'][0]['url'])
+            except:
+                pass
 
         await ctx.send(embed = em)
     
@@ -122,6 +127,11 @@ async def search_post(ctx, query, subredditname = "all", number="10"):
                             em.add_field(name = "Description:", value = list_of_rposts[i].selftext[0:500], inline= False)
                         if (list_of_rposts[i].url[-4:] == '.jpg' or list_of_rposts[i].url[-4:] ==  '.png'):
                             em.set_image(url = list_of_rposts[i].url)
+                        else:
+                            try:
+                                em.set_image(url = list_of_rposts[i].preview['images'][0]['resolutions'][0]['url'])
+                            except:
+                                pass
 
 
                         await ctx.send(embed = em)
@@ -168,6 +178,11 @@ async def search_post(ctx, query, subredditname = "all", number="10"):
                         em.add_field(name = "Description:", value = list_of_rposts[i].selftext[0:500], inline= False)
                     if (list_of_rposts[i].url[-4:] == '.jpg' or list_of_rposts[i].url[-4:] ==  '.png'):
                         em.set_image(url = list_of_rposts[i].url)
+                    else:
+                        try:
+                            em.set_image(url = list_of_rposts[i].preview['images'][0]['resolutions'][0]['url'])
+                        except:
+                            pass
 
 
                     await ctx.send(embed = em)
@@ -215,6 +230,11 @@ async def meme(ctx):
             em.add_field(name = "Description:", value = random_sub.selftext[0:500], inline= False)
     if (random_sub.url[-4:] == '.jpg' or random_sub.url[-4:] == '.png'):
             em.set_image(url = random_sub.url)
+    else:
+        try:
+            em.set_image(url = random_sub.preview['images'][0]['resolutions'][0]['url'])
+        except:
+            pass
     await ctx.send(embed = em)
 
 @client.command(brief= "Return top 10 posts from all of Reddit")
@@ -236,6 +256,11 @@ async def top(ctx):
             em.add_field(name = "Description:", value = list[i].selftext[0:500], inline= False)
         if (list[i].url[-4:] == '.jpg' or list[i].url[-4:] == '.png'):
             em.set_image(url = list[i].url)
+        else:
+            try:
+                em.set_image(url = list[i].preview['images'][0]['resolutions'][0]['url'])
+            except:
+                pass
 
         await ctx.send(embed = em)
 
@@ -272,7 +297,7 @@ async def help (ctx):
     embed.add_field(name='search_post <keyword> <subreddit (optional)> <number (optional)>', value='<keyword> Return top posts containing a keyword, to return a specific number of posts, use: \n "search_post <keyword> <number of posts>"', inline= False )
     embed.add_field(name='search_subreddit <keyword>', value='Returns the top ten subreddits relating to the keyword', inline= False )
     embed.add_field(name='random_post <subreddit>', value='Returns a random post from a subreddit', inline= False )
-
+    embed.add_field(name='print_post <url>', value='Post the content of a reddit post given the url', inline= False )
 
 
     await ctx.send(embed= embed)
