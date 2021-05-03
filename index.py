@@ -68,7 +68,7 @@ async def random_post(ctx, query="all"):
             em.set_image(url = random_sub.url)
         else:
             try:
-                em.set_image(url = list_of_rposts[i].preview['images'][0]['resolutions'][0]['url'])
+                em.set_image(url = random_sub.preview['images'][0]['resolutions'][0]['url'])
             except:
                 pass
 
