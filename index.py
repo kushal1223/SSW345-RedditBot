@@ -62,7 +62,7 @@ async def random_post(ctx, query="all"):
         em.add_field(name = "Number of upvotes: ", value = random_sub.score)
         em.add_field(name = "Subreddit: ", value = random_sub.subreddit)
 
-        if(random_sub.is_self):
+        if(random_sub.selftext !=""):
             em.add_field(name = "Description:", value = random_sub.selftext[0:500], inline= False)
         if (random_sub.url[-4:] == '.jpg' or random_sub.url[-4:] == '.png'):
             em.set_image(url = random_sub.url)
@@ -123,7 +123,7 @@ async def search_post(ctx, query, subredditname = "all", number="10"):
                         em.add_field(name = "Number of upvotes: ", value = list_of_rposts[i].score)
                         em.add_field(name = "Subreddit: ", value = list_of_rposts[i].subreddit)
 
-                        if(list_of_rposts[i].is_self):
+                        if(list_of_rposts[i].selftext !=""):
                             em.add_field(name = "Description:", value = list_of_rposts[i].selftext[0:500], inline= False)
                         if (list_of_rposts[i].url[-4:] == '.jpg' or list_of_rposts[i].url[-4:] ==  '.png'):
                             em.set_image(url = list_of_rposts[i].url)
