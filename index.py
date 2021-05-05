@@ -174,7 +174,7 @@ async def search_post(ctx, query, subredditname = "all", number="10"):
                     em.add_field(name = "Number of upvotes: ", value = list_of_rposts[i].score)
                     em.add_field(name = "Subreddit: ", value = list_of_rposts[i].subreddit)
 
-                    if(list_of_rposts[i].is_self):
+                    if(list_of_rposts[i].selftext !=""):
                         em.add_field(name = "Description:", value = list_of_rposts[i].selftext[0:500], inline= False)
                     if (list_of_rposts[i].url[-4:] == '.jpg' or list_of_rposts[i].url[-4:] ==  '.png'):
                         em.set_image(url = list_of_rposts[i].url)
@@ -226,7 +226,7 @@ async def meme(ctx):
     em.add_field(name = "Number of upvotes: ", value = random_sub.score)
     em.add_field(name = "Subreddit: ", value = random_sub.subreddit)
 
-    if(random_sub.is_self):
+    if(random_sub.selftext !=""):
             em.add_field(name = "Description:", value = random_sub.selftext[0:500], inline= False)
     if (random_sub.url[-4:] == '.jpg' or random_sub.url[-4:] == '.png'):
             em.set_image(url = random_sub.url)
@@ -252,7 +252,7 @@ async def top(ctx):
         em.add_field(name = "Number of upvotes: ", value = list[i].score)
         em.add_field(name = "Subreddit: ", value = list[i].subreddit)
 
-        if(list[i].is_self):
+        if(list[i].selftext != ""):
             em.add_field(name = "Description:", value = list[i].selftext[0:500], inline= False)
         if (list[i].url[-4:] == '.jpg' or list[i].url[-4:] == '.png'):
             em.set_image(url = list[i].url)
@@ -276,7 +276,7 @@ async def print_post(ctx, url):
     em.add_field(name = "Subreddit: ", value = specific_post.subreddit)
 
     
-    if(specific_post.is_self):
+    if(specific_post.selftext !=""):
         em.add_field(name = "Description:", value = specific_post.selftext[0:500], inline= False)
     if (specific_post.url[-4:] == '.jpg' or specific_post.url[-4:] == '.png'):
         em.set_image(url = specific_post.url)
