@@ -1,9 +1,7 @@
 # bot.py
 import os
-import reddit
 import discord
 from dotenv import load_dotenv
-import praw
 from discord.ext import commands
 import random
 import asyncpraw
