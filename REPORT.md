@@ -19,7 +19,7 @@ After installing RedditBot onto the user’s server, the user needs to be able t
 
 
 ### '-r top'
-The top command will return the top ten posts on the home page of Reddit.com. This command will embed links to the original posts within the title of the post and will display the author of the post, the number of upvotes on the post, and the subreddit where the post was originally posted.
+ If the user wants to show their friends the top ten posts on all of Reddit for the day without having to copy and paste each link, they can simply use the “-r top” command. The top command will return the top ten posts on the home page of Reddit.com. This command will embed links to the original posts within the title of the post and will display the author of the post, the number of upvotes on the post, and the subreddit where the post was originally posted.
 
 ![image](https://user-images.githubusercontent.com/44238558/118015583-7221a680-b322-11eb-9f85-882588e30bac.png)
 ![image](https://user-images.githubusercontent.com/44238558/118015675-8b2a5780-b322-11eb-8f8c-26a9f429024f.png)
@@ -36,14 +36,14 @@ For verification purposes here is a screenshot of the top ten reddit posts from 
 
 
 ### '-r meme'
-Typing in “-r meme” will return a meme from the “meme” subreddit along with the author of the post and the number of upvotes.  This command will embed the link to the original poss within the title of the post and will display the author of the post, the number of upvotes on the post, the post’s description, and the subreddit where the post was originally posted.
+If the user would like to make their friend laugh with a random funny meme, typing in “-r meme” will return a meme from the “meme” subreddit along with the author of the post and the number of upvotes. This command will embed the link to the original poss within the title of the post and will display the author of the post, the number of upvotes on the post, the post’s description, and the subreddit where the post was originally posted.
 
 ![image](https://user-images.githubusercontent.com/44238558/118017556-c3329a00-b324-11eb-9486-9f474b1b588b.png)
 
 *This is the “-r meme” function being used*
 
 ### '-r search_post'
-The purpose of this function is to scrape reddit and return posts related to user search. If the user types in “-r search_post <keyword>”, it will return the top ten posts on all of Reddit.com containing the keyword. This command will embed links to the original posts within the title of the post and will display the author of the post, the number of upvotes on the post, the post’s description, and the subreddit where the post was originally posted.
+The purpose of this function is to scrape reddit and return posts related to user search. If the user types in “-r search_post <keyword>”, it will return the top ten posts on all of Reddit.com containing the keyword. This is a great way to get updates and information on that keyword without having to look up individual posts. This command will embed links to the original posts within the title of the post and will display the author of the post, the number of upvotes on the post, the post’s description, and the subreddit where the post was originally posted.
 
 ![image](https://user-images.githubusercontent.com/44238558/118018126-6683af00-b325-11eb-83af-0ec3651db832.png)
 ![image](https://user-images.githubusercontent.com/44238558/118018185-79967f00-b325-11eb-8931-760d1af3298c.png)
@@ -60,7 +60,7 @@ This function additionally supports a user to type in the number of posts they w
 
 *The bot returning 2 posts containing the keyword dog*
 
-The final functionality of this command allows for a user to search for posts within a specific subreddit. Reddit categorizes different posts within subreddits. Subreddits can be thought of generally as different topics or categories people can post within. For example, there is a 'dog' subreddit and a 'stocks' subreddit with each subredding containing posts about their respective name. 
+Optionally, the user can also enter the name of a specific subreddit that they would like to search for the keyword in, along with an optional number of posts as well (if the number is not specified, it will default to 10). Having a specific subreddit to search the keyword in, helps in streamlining the information by gathering it from one specific spot. Reddit categorizes different posts within subreddits. Subreddits can be thought of generally as different topics or categories people can post within. For example, there is a 'dog' subreddit and a 'stocks' subreddit with each subredding containing posts about their respective name. 
 
 A user may wish to lookup information about DOGE, a popular cryptocurrency, within the subreddit named "wallstreetbets" because of users within the subreddit talking about the coin greatly. To do so, the user would do the following:
 
