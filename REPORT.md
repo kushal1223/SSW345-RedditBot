@@ -78,4 +78,19 @@ Lets imagine a user wanted to find the most popular subreddits related to basket
 
 *The “-r search_subreddit” function with “basketball” as the keyword returning 10 subreddits*
 
+### '-r random_post'
+This function will return a random post resulting from the subreddit given by the user on Discord along with the author of the post, the number of upvotes, the subreddit that the post is from, and a description, if any. This is accomplished when the user types in “-r random_post subreddit”.
+
+![image](https://user-images.githubusercontent.com/44238558/118021726-8ae18a80-b329-11eb-9380-f7f0cc4df63e.png)
+
+*The “-r random_post” function with “stocks” as the subreddit returning a post*
+
+
+### '-r print_post'
+The last function is the print_post function. This function will return the post resulting from the url given by the user on Discord along with the author of the post, the number of upvotes, the subreddit the post is from, and a description, if any. The url can be obtained from Reddit. This is useful because it allows users on Discord to see the post without having to go to Reddit. This is accomplished when the user types in “-r print_post url”.
+
+Lets imagine that a user had a certain Reddit post they wanted to share among their friends on Discord. It would be timely for each Discord member to have to click the link, open a web browser, and load the webpage just to look at the post. Instead the original Discord user wanting to share the post can use the "-r print_post" command.
+
+![image](https://user-images.githubusercontent.com/44238558/118022077-f3c90280-b329-11eb-87f9-d69c426cccae.png)
+
 
