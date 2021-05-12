@@ -108,6 +108,6 @@ Looking back on the project, all groupmates can agree that this was one of the m
 Looking back on the development process and project, our group did not have many limitations. Some small things may include a lack of familiarity with Reddit’s PRAW which might have some advanced features that we did not make use of which could have made our project better. However, the tools that we used were not too hard to understand, so this issue mostly stems from us having to meet deadlines and finish our work at a certain time. The only real limitation was Discord’s embedding of videos. Discord does not allow bots to post videos, so any videos on Reddit.com could not be displayed, so we were forced to change the videos into a picture to display instead.
 
 
-As far as any future work moving forward, our group feels like our bot would be very useful for Discord users, so we plan to improve our functionality and design on our own time. Eventually, we would like to have our bot fully deployed and use a service that allows users to make use of our bot at any time.
+As far as any future work moving forward, our group feels like our bot would be very useful for Discord users, so we plan to continue to add functionality if we find anything else that can be added. We currently have this bot deployed on an Ubuntu server using AWS and in the future we will keep it deployed.
 
 
