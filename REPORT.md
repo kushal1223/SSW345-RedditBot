@@ -93,4 +93,21 @@ Lets imagine that a user had a certain Reddit post they wanted to share among th
 
 ![image](https://user-images.githubusercontent.com/44238558/118022077-f3c90280-b329-11eb-87f9-d69c426cccae.png)
 
+### Error Handling
+Since there are certain commands that take in keywords or subreddits from the users on Discord, our group also had to account for any errors that may result from certain inputs. For these commands, we did multiple tests within Discord to see how our bot would respond if the provided keyword was unable to be found, or the provided subreddit did not exist. After testing out multiple inputs that could result in errors, we were able to successfully provide users with an error message relating to the improper input that the bot received. Furthermore, to account for users putting into a large number of desired posts, we decided that the maximum number of posts that could be returned is 30. The following images provide some examples of error messages.
+
+![image](https://user-images.githubusercontent.com/44238558/118024189-62a75b00-b32c-11eb-8b9a-1bafdeed1a3c.png)
+![image](https://user-images.githubusercontent.com/44238558/118024639-ef521900-b32c-11eb-94a9-39ed8062ebce.png)
+![image](https://user-images.githubusercontent.com/44238558/118024282-84a0dd80-b32c-11eb-8f02-de5d8cd53db2.png)
+![image](https://user-images.githubusercontent.com/44238558/118024346-94202680-b32c-11eb-84d9-7b34345ef868.png)
+
+## Reflection
+Looking back on the project, all groupmates can agree that this was one of the most enjoyable projects we have worked on throughout our college career. The use of Discord’s API along with Reddit’s PRAW were both relatively simple tools to understand and use. We all feel that the development process was seamless the entire time. With the use of the Kanban board on GitHub, we were very easily able to divide tasks and list the subtasks to help guide us throughout the development of each task. Throughout the entire development process, we had a constant stream of communication, constantly meeting to discuss issues, fixes, updates, and anything else that we felt necessary. Also with the use of branching and merging on GitHub, we were able to maximize our independent efficiency, since we did not have to rely on each other to push code. Overall, with the easy-to-use tools, streamlined workflow, and constant communication, this project was a fun and unique experience that we are all extremely proud of.
+
+## Limitations and Future Work
+Looking back on the development process and project, our group did not have many limitations. Some small things may include a lack of familiarity with Reddit’s PRAW which might have some advanced features that we did not make use of which could have made our project better. However, the tools that we used were not too hard to understand, so this issue mostly stems from us having to meet deadlines and finish our work at a certain time. The only real limitation was Discord’s embedding of videos. Discord does not allow bots to post videos, so any videos on Reddit.com could not be displayed, so we were forced to change the videos into a picture to display instead.
+
+
+As far as any future work moving forward, our group feels like our bot would be very useful for Discord users, so we plan to improve our functionality and design on our own time. Eventually, we would like to have our bot fully deployed and use a service that allows users to make use of our bot at any time.
+
 
