@@ -67,7 +67,15 @@ A user may wish to lookup information about DOGE, a popular cryptocurrency, with
 ![image](https://user-images.githubusercontent.com/44238558/118019881-7b614200-b327-11eb-8a2e-8d216e71cc72.png)
 
 
+### '-r search_subreddit'
+If a user wishes to find the top ten subreddits related to a certain keyword, they can do so with the '-r search_subreddit' command. The function will return the top ten subreddits resulting from the keyword given by the user on Discord along with a link to the subreddit, the title of the subreddit, the number of subscribers that the subreddit has, and a description, if any. This is accomplished when the user types in “-r search_subreddit keyword”. 
 
+Lets imagine a user wanted to find the most popular subreddits related to basketball. They could do so by doing the following:
 
+![image](https://user-images.githubusercontent.com/44238558/118021074-d7789600-b328-11eb-9ea6-e458ef4827d4.png)
+![image](https://user-images.githubusercontent.com/44238558/118021260-0989f800-b329-11eb-8083-5bcf26774cdf.png)
+![image](https://user-images.githubusercontent.com/44238558/118021154-ea8b6600-b328-11eb-9364-51a60bac0a3d.png)
+
+*The “-r search_subreddit” function with “basketball” as the keyword returning 10 subreddits*
 
 
