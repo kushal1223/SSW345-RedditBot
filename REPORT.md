@@ -4,6 +4,9 @@
  
 *I pledge my honor that I have abided by the Stevens Honor System.- SD,CK,KP*
 
+## Link to our Presentation
+[Click here to view Presentation](https://www.youtube.com/watch?v=PJ0i44TBc_4)
+
 ## Problem Solved
 Considering the scope of the internet, a lot of sites offer information to a user. One website that is considered to be a hub for almost any type of information is Reddit. Reddit is used by millions of people daily, just like the telecommunication platform Discord. This platform allows users to communicate with friends via text and voice chat. Currently, there is no method to share large amounts of information from Reddit on Discord quickly and efficiently. Since Discord is one of the biggest communication platforms, there should be a way to share information from one of the largest information platforms in a fast and concise fashion. RedditBot allows information on Reddit to be shared among other Discord users without anyone needing to leave Discord.
 
